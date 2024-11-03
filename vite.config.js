@@ -9,21 +9,4 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.js',
   },
-  build: {
-    lib: {
-      entry: 'src/main.jsx',
-      name: 'youTubeMFE',
-      formats: ['es', 'umd'],
-      fileName: (format) => `youtubeMFE.${format}.js`,
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
-    },
-  },
 });
